@@ -312,3 +312,131 @@ int main() {
     return 0;
 }
 ---------------------
+/*Write a program to print the following pattern using nested for loops: 
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+*/
+#include <iostream>
+using namespace std;
+int main() {
+  	int n;
+  	cin>>n;
+    // Upper Half
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n - i; j++)
+            cout << " ";
+        for (int j = 1; j <= 2 * i - 1; j++)
+            cout << "*";
+        cout << endl;
+    }
+    // Lower Half
+    for (int i = n-1; i >= 1; i--) {
+        for (int j = 1; j <= n - i; j++)
+            cout << " ";
+        for (int j = 1; j <= 2 * i - 1; j++)
+            cout << "*";
+        cout << endl;
+    }
+}
+-----------------------
+/*Write a program to print the following pattern using nested for loops:
+    1
+   121
+  12321
+ 1234321
+123454321*/
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+
+        // Print spaces
+        for (int j = 1; j <= n - i; j++)
+            cout << " ";
+
+        // Print increasing numbers
+        for (int j = 1; j <= i; j++)
+            cout << j;
+
+        // Print decreasing numbers
+        for (int j = i - 1; j >= 1; j--)
+            cout << j;
+
+        cout << endl;
+    }
+
+    return 0;
+}
+---------------
+  //Write a program to read in an integer and determine if it is a neon number or not.
+  #include <iostream>
+using namespace std;
+int main(){
+  int n;
+  cin>>n;
+  int sq=n*n;
+  int t=sq;
+  int d;
+  int s=0;
+  while (sq>0){
+    d=sq%10;
+    s+=d;
+    sq/=10;
+  }
+  if(s==n){
+    cout<<"Neon";
+  }
+  else{
+    cout<<"not neon";
+  }
+}
+------------------
+  //Write a program to read in an integer and determine if it is a buzz number or not.
+  #include <iostream>
+using namespace std;
+int main() {
+  int n;
+  cin >> n;
+  if (n % 10 == 7 || n % 7 == 0)
+    cout << "Buzz Number";
+  else
+    cout << "Not a Buzz Number";
+  return 0;
+}
+--------------------
+  //Write a program to read in an integer and determine if it is a narcissistic number or not.
+  #include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    int n, temp, digits = 0;
+    int sum = 0;
+    cin >> n;
+    temp = n;
+    int t = n;
+    while (t > 0) {
+        digits++;
+        t /= 10;
+    }
+    t = n;
+    while (t > 0) {
+        int digit = t % 10;
+        sum += pow(digit, digits);
+        t /= 10;
+    }
+    if (sum == n)
+        cout << "Narcissistic Number";
+    else
+        cout << "Not a Narcissistic Number";
+}
