@@ -440,3 +440,264 @@ int main() {
     else
         cout << "Not a Narcissistic Number";
 }
+-------------
+  //Write a program to read in an integer and determine if it is a abundant number or not.
+  #include <iostream>
+using namespace std;
+int main() {
+    int n, sum = 0;
+    cin >> n;
+    for (int i = 1; i <= n / 2; i++) {
+        if (n % i == 0)
+            sum += i;
+    }
+    if (sum > n)
+        cout << "Abundant Number";
+    else
+        cout << "Not an Abundant Number";
+    return 0;
+}
+------------------
+//Write a C++ program to reverse the elements of an array.
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;  	
+    int a[n];
+    for(int i = 0; i < n; i++)
+        cin >> a[i];
+  	int len = sizeof(a) / sizeof(a[0]);
+    for(int i = len - 1; i >= 0; i--)
+        cout << a[i] <<endl;
+
+    return 0;
+}
+-------------------
+  //Write a C++ program to insert an element into an array at a specific position.
+  #include <iostream>
+using namespace std;
+int main() {
+    int a[] = {1, 2, 3, 4, 5};
+    int n = 5, pos = 3, val = 10;
+    for(int i = n; i >= pos; i--) {
+        a[i] = a[i - 1];
+    }
+    a[pos - 1] = val;
+    n++;
+    for(int i = 0; i < n; i++) {
+        cout << a[i] << " ";
+    }
+    return 0;
+}
+---------------------------
+  //Write a C++ program to delete an element from an array at a specific position.
+  
+#include <iostream>
+using namespace std;
+int main() {
+    int a[10] = {1, 2, 3, 4, 5};
+    int n = 5, pos = 3;
+    for(int i = pos - 1; i < n - 1; i++) {
+        a[i] = a[i + 1];
+    }
+    n--;
+    for(int i = 0; i < n; i++) {
+        cout << a[i] << " ";
+    }
+    return 0;
+}
+---------------------
+  //Write a C++ program to find the sum of elements in an array.
+  #include <iostream>
+using namespace std;
+int main() {
+    int a[] = {1, 2, 3, 4, 5};
+    int len = sizeof(a) / sizeof(a[0]);
+    int sum = 0;
+    for(int i = 0; i < len; i++) {
+        sum += a[i];
+    }
+    cout << sum;
+    return 0;
+}
+
+--------------------
+//Write a C++ program to find the average of elements in an array.
+#include <iostream>
+using namespace std;
+int main() {
+    int a[] = {1, 2, 3, 4, 5};
+    int len = sizeof(a) / sizeof(a[0]);
+    int sum = 0;
+    for(int i = 0; i < len; i++) {
+        sum += a[i];
+    }
+    double avg = (double)sum / len;
+    cout << avg;
+    return 0;
+}
+--------------
+  //Write a C++ program to find the second largest element in an array.
+  #include <iostream>
+#include <algorithm>
+using namespace std;
+int main() {
+    int a[] = {5, 3, 1, 4, 2};
+    int len = sizeof(a) / sizeof(a[0]);
+    sort(a, a + len);
+    cout<<a[len-2];
+    return 0;
+}
+---------------------
+//Write a C++ program to find the number of occurrences of a value in an array.
+#include <iostream>
+using namespace std;
+int main() {
+    int a[] = {1, 2, 2, 3, 2, 4, 5};
+    int len = sizeof(a) / sizeof(a[0]);
+    int key = 2;
+    int count = 0;
+    for(int i = 0; i < len; i++) {
+        if(a[i] == key)
+            count++;
+    }
+    cout << count;
+    return 0;
+}
+-------------------
+//Write a C++ program to merge two arrays into a single array.
+#include <iostream>
+using namespace std;
+int main() {
+    int a[] = {1, 2, 3};
+    int b[] = {4, 5, 6};
+    int n1 = sizeof(a) / sizeof(a[0]);
+    int n2 = sizeof(b) / sizeof(b[0]);
+    int c[n1 + n2];
+    for(int i = 0; i < n1; i++)
+        c[i] = a[i];
+    for(int i = 0; i < n2; i++)
+        c[n1 + i] = b[i];
+    for(int i = 0; i < n1 + n2; i++)
+        cout << c[i] << " ";
+    return 0;
+}
+-------------------
+  //Write a C++ program to add 2 matrics.
+#include <iostream>
+using namespace std;
+int main() {
+    int a[2][2] = {{1, 2}, {3, 4}};
+    int b[2][2] = {{5, 6}, {7, 8}};
+    int c[2][2];
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            c[i][j] = a[i][j] + b[i][j];
+        }
+    }
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            cout << c[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+---------------
+//Write a C++ program to multiply 2 matrics.
+#include <iostream>
+using namespace std;
+int main() {
+    int a[2][2] = {{1, 2}, {3, 4}};
+    int b[2][2] = {{5, 6}, {7, 8}};
+    int c[2][2] = {0};
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            for(int k = 0; k < 2; k++) {
+                c[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            cout << c[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+---------------
+//Write a C++ program find sum of diagonals of the matrics 
+#include <iostream>
+using namespace std;
+int main() {
+    int a[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    int n = 3;
+    int sum = 0;
+    for(int i = 0; i < n; i++) {
+        sum += a[i][i]; // main diagonal
+    }
+    cout << sum;
+    return 0;
+}
+-------------------
+//Write a function to compute the factorial of a given integer.
+#include <iostream>
+using namespace std;
+int factorial(int n) {
+    int fact = 1;
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+int main() {
+    int n;
+    cin >> n;
+    cout << "Factorial = " << factorial(n);
+    return 0;
+}
+----------
+//Write a function to determine if a given integer is a prime number or not.
+#include <iostream>
+using namespace std;
+string p(int n){
+  int c=0;
+  for(int i=1;i<=n;i++){
+    if (n%i==0){
+      c++;
+    }
+  }
+  if(c==2){
+    return "prime";
+  }
+  else
+    return "not prime";
+}
+int main(){
+  int n;
+  cin>>n;
+  cout<<p(n);
+}
+-----------------------
+//Write a function to determine the GCD (greatest common divisor) of two given integers.
+#include<iostream>
+using namespace std;
+int gcd(int a,int b){
+  int g=1;
+  for(int i=1;i<=a and i<=b;i++){
+    if(a%i==0 and b%i==0)
+      g=i;
+  }
+  return g;
+}
+int main(){
+  int a,b;
+  cin>>a>>b;
+  cout<<gcd(a,b);
+}
