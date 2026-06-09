@@ -272,6 +272,17 @@ int main() {
     else
         cout<<"Not Automorphic";
 }
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n, sq, m = 1;
+    cin >> n;
+    sq = n * n;
+    for(int t = n; t > 0; t /= 10)
+        m *= 10;
+    cout << (sq % m == n ? "Automorphic" : "Not Automorphic");
+}
 ------------------------------------------------
 //Diamond Pattern
 #include <iostream>
