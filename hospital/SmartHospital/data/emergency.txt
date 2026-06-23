@@ -1,0 +1,4 @@
+E2001|Kabir Shah|54|4|Chest Pain|7|0
+E2002|Nisha Verma|34|3|Fracture|20|0
+E2003|Farhan Ali|71|5|Stroke Alert|0|0
+E1001|hi|23|4|accident|27|0

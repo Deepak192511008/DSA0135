@@ -1,0 +1,4 @@
+P1001|Ananya Rao|42|59|High|6|2|Hypertension,8;Asthma,5|2026-06-01 09:15:00,Initial registration;2026-06-12 11:30:00,Follow-up visit
+P1002|Rohan Mehta|68|100|Critical|9|5|Diabetes,12;Cardiac History,18|2026-05-20 10:00:00,Emergency review;2026-06-10 16:20:00,Medication adjusted
+P1003|Meera Iyer|29|26|Low|3|1|Migraine,3|2026-06-08 14:45:00,General consultation
+1002|ray|34|77|High|3|2|high fever,16;fever,10;high fever,20|2026-06-16 12:22:50,Patient registered;2026-06-16 12:23:15,Patient profile updated
