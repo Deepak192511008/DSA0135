@@ -1,0 +1,6 @@
+build/
+build-*/
+backup/
+reports/*.csv
+reports/*.txt
+data/timetable.csv

@@ -1,0 +1,5 @@
+id,name,department,subjects,max_hours,leave_count
+F001,Dr. Meera Sharma,CSE,CS101|CS104,18,1
+F002,Prof. Arjun Rao,CSE,CS102|CS105,16,0
+F003,Dr. Kavita Menon,ECE,CS103|CS106,15,2
+F004,Prof. Imran Khan,Mathematics,MA101,14,0

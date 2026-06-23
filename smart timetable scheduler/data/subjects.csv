@@ -1,0 +1,7 @@
+code,name,weekly_hours,type,faculty_id,difficulty
+CS101,Data Structures,4,Theory,F001,5
+CS102,Database Systems,4,Theory,F002,4
+CS103,Digital Electronics,3,Theory,F003,3
+CS104,Data Structures Lab,2,Lab,F001,4
+CS105,Database Lab,2,Lab,F002,4
+MA101,Discrete Mathematics,4,Theory,F004,5
